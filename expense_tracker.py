@@ -8,13 +8,10 @@ def main():
     expense_file_path = "expenses.csv"
     budget = 2000
 
-    # Get user input for expense.
     expense = get_user_expense()
 
-    # Write their expense to a file.
     save_expense_to_file(expense, expense_file_path)
 
-    # Read file and summarize expenses.
     summarize_expenses(expense_file_path, budget)
 
 
@@ -67,7 +64,7 @@ def summarize_expenses(expense_file_path, budget):
         
          line_expense = Expense(
             name=expense_name,
-            amount=float(expense_amount), # Now this will correctly get the number
+            amount=float(expense_amount), 
             category=expense_category,
         )
         expenses.append(line_expense)
@@ -103,4 +100,5 @@ def green(text):
 
 
 if __name__ == "__main__":
+
     main()
